@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 public static class Transfer
 {
-    public static void TransferMenu(ref decimal balance, List<string> transactionHistory) // para sa pagtransfer ng pera to other user
+    public static void TransferMenu(ref decimal balance, List<string> transactionHistory) 
     {
         bool exit = false;
         while (!exit)
@@ -33,15 +33,15 @@ public static class Transfer
         }
     }
 
-    public static void TransferMoney(ref decimal balance, List<string> transactionHistory) // magtransfer ng pera sa target account na registered
+    public static void TransferMoney(ref decimal balance, List<string> transactionHistory) 
     {
-        Console.WriteLine("Registered Accounts:"); // iappakita listahan ng registered target account/s
+        Console.WriteLine("Registered Accounts:"); 
         foreach (var account in Accounts.AllAccounts)
         {
             Console.WriteLine($"Account Number: {account.Key}, Account Name: {account.Value.AccountName}");
         }
 
-        Console.Write("Enter account number to transfer to: "); // pipili ng target account
+        Console.Write("Enter account number to transfer to: "); 
         string accountNumber = Console.ReadLine();
         if (!Accounts.AllAccounts.ContainsKey(accountNumber))
         {
@@ -53,7 +53,7 @@ public static class Transfer
         Account targetAccount = Accounts.AllAccounts[accountNumber];
 
 
-        Console.Write("Enter amount to transfer: "); // lalagay ng amount na itatatransfer o isesend
+        Console.Write("Enter amount to transfer: "); 
         if (decimal.TryParse(Console.ReadLine(), out decimal amount) && amount > 0)
         {
             if (amount <= balance)
@@ -78,7 +78,7 @@ public static class Transfer
         Console.ReadKey();
     }
 
-    public static void RegisterAccount() // mag reregister ng target account, every registered account may initial na 1k para sa session
+    public static void RegisterAccount() 
     {
         Console.Write("Enter new account number: ");
         string accountNumber = Console.ReadLine();
@@ -94,7 +94,7 @@ public static class Transfer
 
         string password = Login.CurrentUserPassword;
 
-        Accounts.AllAccounts.Add(accountNumber, new Account(accountName, 1000.00m)); // Initial balance set to 1000.00
+        Accounts.AllAccounts.Add(accountNumber, new Account(accountName, 1000.00m)); 
         Console.WriteLine("Account registration successful! Press any key to continue...");
         Console.ReadKey();
     }
