@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-public class UserInfo //Dictionary na pwede lagyan ng multiple users through register. Also inistore ang credentials ng user for login
-{
+public class UserInfo 
     public string AccountName { get; set; }
     public string Password { get; set; }
     public decimal Balance { get; set; }
@@ -16,8 +15,6 @@ public class UserInfo //Dictionary na pwede lagyan ng multiple users through reg
 
     public static Dictionary<string, UserInfo> DefaultUsers { get; } = new Dictionary<string, UserInfo>
     {
-        { "admin", new UserInfo("AdminUser", "123456", 1000.00m) } // Default user na pwede agad i log in
+        { "admin", new UserInfo("AdminUser", "123456", 1000.00m) } 
     };
 }
-
-//Connected toh sa mainLoginReg.cs at AuthReg.cs
