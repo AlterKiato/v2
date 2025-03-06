@@ -3,12 +3,10 @@ using System.Collections.Generic;
 
 public static class Login
 {
-    static Dictionary<string, UserInfo> users = UserInfo.DefaultUsers; // Nag aauthenticate sa mga users sa loginReg.cs
-                                                                       // at nag reregister ng new user sa loginReg.cs
-
+    static Dictionary<string, UserInfo> users = UserInfo.DefaultUsers; 
     public static string CurrentUserPassword { get; private set; }
 
-    public static bool Authenticate() // chinecheck kung may existing user na sa users dictionary
+    public static bool Authenticate() 
     {
         Console.Write("Enter username: ");
         string username = Console.ReadLine();
@@ -30,7 +28,7 @@ public static class Login
         }
     }
 
-    public static void Register() // Nag reregister ng new user sa users dictionary
+    public static void Register() 
     {
         Console.Write("Enter new username: ");
         string username = Console.ReadLine();
@@ -47,7 +45,7 @@ public static class Login
         Console.Write("Enter new password: ");
         string password = Console.ReadLine();
 
-        users.Add(username, new UserInfo(accountName, password, 1000.00m)); // automatic may 1k na balance
+        users.Add(username, new UserInfo(accountName, password, 1000.00m)); 
         Console.WriteLine("Registration successful! Press any key to continue...");
         Console.ReadKey();
     }
