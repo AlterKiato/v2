@@ -19,3 +19,5 @@ public class UserInfo //Dictionary na pwede lagyan ng multiple users through reg
         { "admin", new UserInfo("AdminUser", "123456", 1000.00m) } // Default user na pwede agad i log in
     };
 }
+
+//Connected toh sa mainLoginReg.cs at AuthReg.cs
