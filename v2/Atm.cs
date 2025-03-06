@@ -3,11 +3,10 @@ using System.Collections.Generic;
 
 public static class ATMFunctions
 {
-    static List<string> transactionHistory = new List<string>(); //ginagamit para magkaroon ng listahan na rinerecord every transaction within the session
-
+    static List<string> transactionHistory = new List<string>(); 
     public static void MainMenu()
     {
-        decimal balance = 1000.00m; // fixed balance para sa user
+        decimal balance = 1000.00m; 
         bool exit = false;
         while (!exit)
         {
@@ -22,7 +21,7 @@ public static class ATMFunctions
             Console.Write("Select an option: ");
             switch (Console.ReadLine())
             {
-                case "1": // mas pinadali na if else statement
+                case "1": 
                     CheckBalance(balance);
                     break;
                 case "2":
@@ -48,14 +47,14 @@ public static class ATMFunctions
         }
     }
 
-    public static void CheckBalance(decimal balance) // chinecheck ang balance ni user
+    public static void CheckBalance(decimal balance) 
     {
         Console.WriteLine($"Your balance is: ${balance:F2}");
         Console.WriteLine("Press any key to continue...");
         Console.ReadKey();
     }
 
-    public static void Withdraw(ref decimal balance) // Winiwithdraw ang balance ni user
+    public static void Withdraw(ref decimal balance) 
     {
         Console.WriteLine($"Your balance is: ${balance:F2}");
         Console.Write("Enter amount to withdraw: ");
@@ -81,8 +80,7 @@ public static class ATMFunctions
         Console.ReadKey();
     }
 
-    public static void Deposit(ref decimal balance) // Dinedeposit para sa balance ni user
-    {
+    public static void Deposit(ref decimal balance) 
         Console.WriteLine($"Your balance is: ${balance:F2}");
         Console.Write("Enter amount to deposit: ");
         if (decimal.TryParse(Console.ReadLine(), out decimal amount) && amount > 0)
@@ -100,8 +98,7 @@ public static class ATMFunctions
         Console.ReadKey();
     }
 
-    public static void ShowTransactionHistory() // Nagpapakita ng record ng every transaction (withdraw, deposit, transfer) dito papasok ang "static List<string> transactionHistory = new List<string>();" sa itaas
-    {
+    public static void ShowTransactionHistory() 
         Console.WriteLine("Transaction History:");
         if (transactionHistory.Count == 0)
         {
@@ -119,4 +116,4 @@ public static class ATMFunctions
     }
 }
 
-//Connected sa lahat
+
