@@ -17,3 +17,5 @@ public static class Accounts
 {
     public static Dictionary<string, Account> AllAccounts { get; } = new Dictionary<string, Account>();
 }
+
+//Connected to TransferMenu.cs
