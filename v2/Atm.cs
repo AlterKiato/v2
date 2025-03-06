@@ -118,3 +118,5 @@ public static class ATMFunctions
         Console.ReadKey();
     }
 }
+
+//Connected sa lahat
