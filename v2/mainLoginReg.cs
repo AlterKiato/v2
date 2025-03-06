@@ -2,7 +2,7 @@
 
 public static class Program
 {
-    public static void Main() //Pinaka Main na babasahin ng program
+    public static void Main() 
     {
         while (true)
         {
@@ -26,15 +26,13 @@ public static class Program
                     case "3":
                         return;
                     default:
-                        Console.WriteLine("Invalid option. Press any key to try again..."); //Hinihintay si user na mag press ng key bago mag proceed.
-                        Console.ReadKey(); //Para mabasa nya yung message at maging malinis ang console
+                        Console.WriteLine("Invalid option. Press any key to try again..."); 
+                        Console.ReadKey(); 
                         break;
                 }
             }
 
-            ATMFunctions.MainMenu(); // after mag log in, didirekta sa atm.cs kung saan ang main()
+            ATMFunctions.MainMenu(); 
         }
     }
 }
-
-// Connected sa UserInfo.cs, AuthrReg.cs, at Atm.cs
