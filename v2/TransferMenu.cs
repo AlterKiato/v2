@@ -99,3 +99,5 @@ public static class Transfer
         Console.ReadKey();
     }
 }
+
+// Connected to Atm.cs and TransferFunc.cs
