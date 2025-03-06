@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-public class Account // Dictionary para sa target accounts na rinegister ni user
-{
+public class Account 
     public string AccountName { get; set; }
     public decimal Balance { get; set; }
 
@@ -17,5 +16,3 @@ public static class Accounts
 {
     public static Dictionary<string, Account> AllAccounts { get; } = new Dictionary<string, Account>();
 }
-
-//Connected to TransferMenu.cs
