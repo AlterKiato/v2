@@ -50,5 +50,3 @@ public static class Login
         Console.ReadKey();
     }
 }
-
-// Connected to mainLoginReg.cs and UserInfo.cs
