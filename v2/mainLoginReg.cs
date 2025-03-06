@@ -36,3 +36,5 @@ public static class Program
         }
     }
 }
+
+// Connected sa UserInfo.cs, AuthrReg.cs, at Atm.cs
