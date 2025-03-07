@@ -94,7 +94,7 @@ public static class Transfer
 
         string password = Login.CurrentUserPassword;
 
-        Accounts.AllAccounts.Add(accountNumber, new Account(accountName, 1000.00m)); // Initial balance set to 1000.00
+        Accounts.AllAccounts.Add(accountNumber, new Account(accountName, 1000.00m)); // Initial balance set to 1000.00 for session
         Console.WriteLine("Account registration successful! Press any key to continue...");
         Console.ReadKey();
     }
